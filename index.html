@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Persewangi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/styles/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>                
+                <div class="navbar">
+                    <img src="assets/image/logo.png">
+                    <div class="navbar-menu">
+                        <ul>
+                            <li><a href="#pertandingan">Pertandingan</a></li>
+                            <li><a href="#berita">Berita</a></li>
+                            <li><a href="tim">Tim</a></li>
+                            <li><a href="#galeri">Galeri</a></li>
+                        </ul>        
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <main>
+
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="assets/image/slide_1.jpg" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <img src="assets/image/slide_2.jpg" style="width:100%">
+                  </div>
+                                    
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            
+            <div id="content">            
+                
+                <article id="pertandingan" class="pertandingan">
+                    <h2 class="pertandingan-title">Pertandingan</h2>
+                    <div class="pertandingan-content">
+                        <div class="pertandingan-sebelumnya">
+                            <div class="pertandingan-description">
+                                <p>Liga 3 Nusantara</p>
+                                <span>13 Februari 2022</span>
+                            </div>
+                            <ul>
+                                <li><img src="assets/image/persebi.png"></li>
+                                <li>7</li>
+                                <li>:</li>
+                                <li>2</li>
+                                <li><img src="assets/image/logo.png"></li>
+                            </ul>
+                            <div class="pertandingan-club-name">
+                                <p>Persebi VS Persewangi</p>
+                            </div>
+                        </div>
+                        <div class="klasmen">
+                            <div class="klasmen-title">
+                                <p>Liga 3 Nusantara</p>
+                            </div>
+                            <table id="matchTitle">
+                                <thead>
+                                    <tr>
+                                        <th>Klasemen</th>
+                                        <th></th>
+                                        <th data-field="number-match">2021-2022</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <table id="matchList" class="match-list">
+                                <thead>
+                                    <tr>
+                                        <th data-field="number" data-align="center" width="20"></th>
+                                        <th data-field="team" data-align="center" width="190" height="27">#Tim</th>
+                                        <th data-field="p" data-align="center" width="20">P</th>
+                                        <th data-field="points" data-align="center" width="20">Pts</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="1">
+                                    <td>1</td>
+                                    <td>
+                                        <span class="text-left">Persebi Boyolali</span>
+                                    </td>
+                                    <td>
+                                        <span>3</span>
+                                    </td>
+                                    <td>
+                                        <span>7</span>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td>2</td>
+                                    <td>
+                                        <span class="text-left">PSBL Langsa</span>
+                                    </td>
+                                    <td>
+                                        <span>3</span>
+                                    </td>
+                                    <td>
+                                        <span>5</span>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td>3</td>
+                                    <td>
+                                        <span class="text-left">Persitoli Tolikara</span>
+                                    </td>
+                                    <td>
+                                        <span>3</span>
+                                    </td>
+                                    <td>
+                                        <span>4</span>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td>4</td>
+                                    <td>
+                                        <span class="text-left">Persewangi</span>
+                                    </td>
+                                    <td>
+                                        <span>3</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                </tr>                                                                                                                                                                                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+    
+                <article id="berita">
+                    <h2>Berita Terbaru</h2>
+                    <ul class="list-group news-list">
+                        <li class="list-group-item">
+                        <div class="news-img float-left"> 
+                            <img class="fit-cover" src="https://www.baliutd.com/wp-content/uploads/2022/04/IMG-20220428-WA0003.jpg">
+                        </div>                                
+                        <div class="news-desc home float-right">
+                            <span class="date">28 April 2022</span>
+                            <p> <a href="https://www.baliutd.com/news/media-news/trending-topic-twitter-bali-united-rewind-ulas-perjalanan-liga-1-hingga-mengukir-sejarah-baru/">TRENDING TOPIC TWITTER, BALI UNITED...</a></p>                                                            
+                        </div>                                
+                    </li>
+                    
+                </ul>
+                </article>
+    
+                <article id="tim">
+    
+                </article>
+    
+                <article id="galeri">
+    
+                </article>
+            </div>
+
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+
+          slides[slideIndex-1].style.display = "block";  
+
+        }
+        </script>
+</html>
