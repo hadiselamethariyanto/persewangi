@@ -14,8 +14,7 @@
                         <ul>
                             <li><a href="#pertandingan">Pertandingan</a></li>
                             <li><a href="#berita">Berita</a></li>
-                            <li><a href="tim">Tim</a></li>
-                            <li><a href="#galeri">Galeri</a></li>
+                            <li><a href="#tim">Tim</a></li>
                         </ul>        
                     </div>
                 </div>
@@ -38,8 +37,7 @@
 
             </div>
             
-            <div id="content">            
-                
+            <div id="content">                            
                 <article id="pertandingan" class="pertandingan">
                     <h2 class="pertandingan-title">Pertandingan</h2>
                     <div class="pertandingan-content">
@@ -75,61 +73,14 @@
                             <table id="matchList" class="match-list">
                                 <thead>
                                     <tr>
-                                        <th data-field="number" data-align="center" width="20"></th>
-                                        <th data-field="team" data-align="center" width="190" height="27">#Tim</th>
-                                        <th data-field="p" data-align="center" width="20">P</th>
-                                        <th data-field="points" data-align="center" width="20">Pts</th>
+                                        <th width="20"></th>
+                                        <th width="190" height="27">#Tim</th>
+                                        <th width="20">P</th>
+                                        <th width="20">Pts</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                <tr class="1">
-                                    <td>1</td>
-                                    <td>
-                                        <span class="text-left">Persebi Boyolali</span>
-                                    </td>
-                                    <td>
-                                        <span>3</span>
-                                    </td>
-                                    <td>
-                                        <span>7</span>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>2</td>
-                                    <td>
-                                        <span class="text-left">PSBL Langsa</span>
-                                    </td>
-                                    <td>
-                                        <span>3</span>
-                                    </td>
-                                    <td>
-                                        <span>5</span>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>3</td>
-                                    <td>
-                                        <span class="text-left">Persitoli Tolikara</span>
-                                    </td>
-                                    <td>
-                                        <span>3</span>
-                                    </td>
-                                    <td>
-                                        <span>4</span>
-                                    </td>
-                                </tr>
-                                <tr class="">
-                                    <td>4</td>
-                                    <td>
-                                        <span class="text-left">Persewangi</span>
-                                    </td>
-                                    <td>
-                                        <span>3</span>
-                                    </td>
-                                    <td>
-                                        <span>0</span>
-                                    </td>
-                                </tr>                                                                                                                                                                                              </tbody>
+                                <tbody id="tabel-klasmen">
+                                </tbody>                                                                                                                                                                                              </tbody>
                             </table>
                         </div>
                     </div>
@@ -137,61 +88,54 @@
     
                 <article id="berita">
                     <h2>Berita Terbaru</h2>
-                    <ul class="list-group news-list">
-                        <li class="list-group-item">
-                        <div class="news-img float-left"> 
-                            <img class="fit-cover" src="https://www.baliutd.com/wp-content/uploads/2022/04/IMG-20220428-WA0003.jpg">
-                        </div>                                
-                        <div class="news-desc home float-right">
-                            <span class="date">28 April 2022</span>
-                            <p> <a href="https://www.baliutd.com/news/media-news/trending-topic-twitter-bali-united-rewind-ulas-perjalanan-liga-1-hingga-mengukir-sejarah-baru/">TRENDING TOPIC TWITTER, BALI UNITED...</a></p>                                                            
-                        </div>                                
-                    </li>
-                    
-                </ul>
+                    <ul id="list-news" class="list-group news-list">                                            
+                    </ul>
                 </article>
     
                 <article id="tim">
-    
+                    <h2>Tim Utama</h2>
+                    <div class="tim-container">
+                        <div id="squads" style="position: relative;">                                                                                                  
+                        </div>                        
+                    </div>
                 </article>
-    
-                <article id="galeri">
-    
-                </article>
+                   
             </div>
 
-
-
+            <aside>
+                <article class="profile card">
+                    <header>
+                        <h2>Persewangi</h2>
+                        <p>Laskar Blambangan</p>
+                        <figure>
+                            <img src="assets/image/logo.png">
+                            <figcaption>Logo</figcaption>
+                        </figure>            
+                    </header>
+                    <section>
+                        <h3>Informasi Lainnya</h3>
+                        <table>
+                           <tr>
+                              <th>Berdiri</th>
+                              <td>1 Desember 1970</td>
+                           </tr>
+                           <tr>
+                              <th>Stadion</th>
+                              <td>Stadion Dipenogoro, Banyuwangi</td>
+                           </tr>
+                           <tr>
+                              <th>Liga</th>
+                              <td>Liga 3 Jawa Timur</td>
+                           </tr>
+                       </table>
+                    </section>
+                </article>
+            </aside>
         </main>
         <footer>
-
+            <p>Persewangi Banyuwangi Official Website &#169; 2022</p>
         </footer>
     </body>
 
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-
-          slides[slideIndex-1].style.display = "block";  
-
-        }
-        </script>
+    <script src="assets/common.js"></script>
 </html>

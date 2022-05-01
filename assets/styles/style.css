@@ -12,9 +12,42 @@ body {
     text-decoration: none;
   }
 
+  .profile header {
+    text-align: center;
+ }
+ 
+ .profile img {
+    width: 180px;
+    height: auto;
+ }
+
+ aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+      
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #AF1B22;
+  text-align: center;
+  font-weight: bold;
+}
+
  #content {
-    width: 100%;
     padding: 20px;
+    float: left;
+    width: 75%;
   }
 
 * {
@@ -22,10 +55,6 @@ body {
 }
 
 .news-list li{
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    border: 0;
     display: inline-block;
     width: 100%;
     padding: 0;
@@ -94,7 +123,7 @@ body {
 
 
 .pertandingan{
-    border: 4px solid #AF1B22;
+    border: 4px solid #030202;
     position: relative;
     padding-bottom: 20px;
 }
@@ -106,7 +135,6 @@ body {
     width: fit-content;
     left: 50%;
     margin-top: -.9375rem;
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     white-space: nowrap;
     line-height: 1;
@@ -125,6 +153,7 @@ body {
 
 .klasmen{
     flex: 1;
+    padding: 0px;
 }
 
 .klasmen-title p{
@@ -192,12 +221,47 @@ table th,td {
     display: none
 }
 
+.squad{
+  display: none;
+  text-align: center;
+}
+
+.squad img{
+  width: 350px;
+}
+
+.squad p{
+  color: #FFF;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+
+.squad span{
+  color: #FFF;
+  font-size: 18px;
+}
+
  /* Slideshow container */
 .slideshow-container {
     max-width: 100%;
     position: relative;
     margin: auto;
   }
+
+  .tim-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    display:flex;
+    background-color: #030202;
+    height:100%;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    padding: 40px;
+  }
+
 
 
 .mySlides img{
@@ -325,3 +389,31 @@ table th,td {
     list-style-type: none;
     margin-right: 20px;
  }
+
+ @media screen and (max-width: 1000px) {
+  #content,
+  aside {
+      width: 100%;
+      padding: 0;
+  }
+
+  .pertandingan-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+  }
+  .klasmen{
+    padding: 20px;
+  }
+  .pertandingan li{
+    font-size: 3.5em;
+  }
+
+  .pertandingan ul li img{
+    height: 55px;
+  }
+
+  .tim-container {
+    padding: 0 40;
+  }
+}
